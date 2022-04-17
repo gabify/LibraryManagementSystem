@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Imports ClosedXML.Excel
+Imports System.IO
 
 Public Class classBook
     Inherits connectionClass
@@ -63,11 +64,11 @@ VALUES (@accessnum, @callnum, @author, @title, @publication, @cy, @copy, @remark
     End Function
 
     'Delete data in database
-    Public Function delete(ByVal id As Integer) As Integer
-        operation = "DELETE FROM tblBooks WHERE ID = @id"
+    Public Function delete(ByVal id As Integer, ByRef query As String) As Integer
+        op.Parameters.Clear()
         op.Connection = conn
         op.CommandType = CommandType.Text
-        op.CommandText = operation
+        op.CommandText = query
         op.Parameters.AddWithValue("@id", id)
         conn.Open()
         op.ExecuteNonQuery()
@@ -129,6 +130,17 @@ VALUES (@accessnum, @callnum, @author, @title, @publication, @cy, @copy, @remark
         Dim result As Integer = Convert.ToInt32(op.ExecuteScalar)
         conn.Close()
         Return result
+    End Function
+
+    Public Function selectPDF(ByRef acceesionNum As Integer) As String
+        Dim pdfFile As String = ""
+        Using open As OpenFileDialog = New OpenFileDialog() With {.Filter = "PDF| *.pdf"}
+            If (open.ShowDialog = DialogResult.OK) Then
+                pdfFile = open.FileName
+                Return pdfFile
+            End If
+        End Using
+        Return pdfFile
     End Function
 
 End Class

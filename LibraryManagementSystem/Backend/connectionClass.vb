@@ -16,17 +16,19 @@ Public Class connectionClass
         op.CommandType = CommandType.Text
         op.CommandText = operation
         op.Parameters.AddWithValue("@username", username)
-        Dim val As String = op.ExecuteScalar().ToString()
+        Dim ob As Object = op.ExecuteScalar
         conn.Close()
-        If (val Is vbNullString) Then
+        If (ob Is Nothing) Then
             Return 1
         Else
+            Dim val As String = ob.ToString()
             If (val = password) Then
                 Return 0
             Else
                 Return 2
             End If
         End If
+
     End Function
 
     Public Function ifempty(ByVal value As String) As Boolean

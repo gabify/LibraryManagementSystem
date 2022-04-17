@@ -58,14 +58,7 @@
                 RowNum.Text = "Number of Books: " + DataGridView1.RowCount.ToString
 
                 'Clear textboxes
-                txtCallNum.Text = ""
-                txtAuthor.Text = ""
-                txtTitle.Text = ""
-                txtPublication.Text = ""
-                txtCy.Text = ""
-                txtCopy.Text = ""
-                txtsearch.Text = ""
-                remarksCombo.SelectedIndex = -1
+                clearTextbox()
             Catch ex As FormatException
                 MessageBox.Show("Please input number on copy.")
             End Try
@@ -78,12 +71,12 @@
         id = Convert.ToInt32(DataGridView1.CurrentRow.Cells(0).Value)
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this entry?", "Warning", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            booksDb.delete(id)
+            booksDb.delete(id, "DELETE FROM tblBooks WHERE ID = @id")
             DataGridView1.Refresh()
             DataGridView1.DataSource = booksDb.populateData()
             booksTotal.Text = "Total Number of Books: " + booksDb.getTotalNumBooks.ToString
             RowNum.Text = "Number of Books: " + DataGridView1.RowCount.ToString
-            txtsearch.Text = ""
+            clearTextbox()
         End If
 
     End Sub
@@ -129,15 +122,7 @@
             DataGridView1.DataSource = booksDb.populateData()
 
             'Clear textboxes
-            txtaccessNum.Text = ""
-            txtCallNum.Text = ""
-            txtAuthor.Text = ""
-            txtTitle.Text = ""
-            txtPublication.Text = ""
-            txtCy.Text = ""
-            txtCopy.Text = ""
-            txtsearch.Text = ""
-            remarksCombo.SelectedIndex = -1
+            clearTextbox()
         Catch ex As FormatException
             MessageBox.Show("Please input number on copy")
         End Try
@@ -175,9 +160,15 @@
             Else
                 Dim val() As String
                 val = value.Split(" ")
-                connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value AND LIKE @value1 ORDER BY accessionNum"
-                connect.op.Parameters.AddWithValue("@value", "%" + val(0) + "%")
-                connect.op.Parameters.AddWithValue("@value1", "%" + val(1) + "%")
+                If (val.Length > 1) Then
+                    connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value AND LIKE @value1 ORDER BY accessionNum"
+                    connect.op.Parameters.AddWithValue("@value", "%" + val(0) + "%")
+                    connect.op.Parameters.AddWithValue("@value1", "%" + val(1) + "%")
+                Else
+                    connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value ORDER BY accessionNum"
+                    connect.op.Parameters.AddWithValue("@value", "%" + val(0) + "%")
+                End If
+
             End If
 
             connect.conn.Open()
@@ -205,6 +196,20 @@
 
     Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
         'Clear textboxes
+        clearTextbox()
+
+        DataGridView1.Refresh()
+        DataGridView1.DataSource = booksDb.populateData()
+        RowNum.Text = "Number of Books: " + DataGridView1.RowCount.ToString
+    End Sub
+
+    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+        Dim form As New fileUpload(Convert.ToInt32(txtaccessNum.Text))
+        form.Show()
+    End Sub
+
+    Private Sub clearTextbox()
+        'Clear textboxes
         txtaccessNum.Text = ""
         txtCallNum.Text = ""
         txtAuthor.Text = ""
@@ -214,9 +219,6 @@
         txtCopy.Text = ""
         txtsearch.Text = ""
         remarksCombo.SelectedIndex = -1
-
-        DataGridView1.Refresh()
-        DataGridView1.DataSource = booksDb.populateData()
-        RowNum.Text = "Number of Books: " + DataGridView1.RowCount.ToString
+        searchCombo.SelectedIndex = -1
     End Sub
 End Class

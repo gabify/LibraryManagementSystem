@@ -60,6 +60,7 @@ Partial Class books
         Me.booksTotal = New System.Windows.Forms.Label()
         Me.RowNum = New System.Windows.Forms.Label()
         Me.btnrefresh = New System.Windows.Forms.Button()
+        Me.btnUpload = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -414,11 +415,21 @@ Partial Class books
         Me.btnrefresh.Text = "Refresh"
         Me.btnrefresh.UseVisualStyleBackColor = True
         '
+        'btnUpload
+        '
+        Me.btnUpload.Location = New System.Drawing.Point(796, 426)
+        Me.btnUpload.Name = "btnUpload"
+        Me.btnUpload.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpload.TabIndex = 17
+        Me.btnUpload.Text = "Upload PDF"
+        Me.btnUpload.UseVisualStyleBackColor = True
+        '
         'books
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(963, 489)
+        Me.Controls.Add(Me.btnUpload)
         Me.Controls.Add(Me.btnrefresh)
         Me.Controls.Add(Me.RowNum)
         Me.Controls.Add(Me.booksTotal)
@@ -476,4 +487,5 @@ Partial Class books
     Friend WithEvents copy As DataGridViewTextBoxColumn
     Friend WithEvents remarks As DataGridViewTextBoxColumn
     Friend WithEvents btnrefresh As Button
+    Friend WithEvents btnUpload As Button
 End Class
