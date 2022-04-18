@@ -33,13 +33,9 @@ Partial Class books
         Me.copy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnExport = New System.Windows.Forms.Button()
         Me.remarksCombo = New System.Windows.Forms.ComboBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.txtqwqRemarks = New System.Windows.Forms.Label()
-        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.txtCowqwpy = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
         Me.txtCywqw = New System.Windows.Forms.Label()
         Me.qw = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -53,16 +49,21 @@ Partial Class books
         Me.txtAuthor = New System.Windows.Forms.TextBox()
         Me.txtCallNum = New System.Windows.Forms.TextBox()
         Me.txtaccessNum = New System.Windows.Forms.TextBox()
+        Me.btnExport = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.searchCombo = New System.Windows.Forms.ComboBox()
         Me.booksTotal = New System.Windows.Forms.Label()
         Me.RowNum = New System.Windows.Forms.Label()
         Me.btnrefresh = New System.Windows.Forms.Button()
         Me.btnUpload = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -74,7 +75,7 @@ Partial Class books
         Me.DataGridView1.Location = New System.Drawing.Point(12, 57)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(844, 279)
+        Me.DataGridView1.Size = New System.Drawing.Size(1087, 279)
         Me.DataGridView1.TabIndex = 0
         '
         'id
@@ -159,13 +160,9 @@ Partial Class books
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnExport)
         Me.GroupBox1.Controls.Add(Me.remarksCombo)
-        Me.GroupBox1.Controls.Add(Me.btnDelete)
         Me.GroupBox1.Controls.Add(Me.txtqwqRemarks)
-        Me.GroupBox1.Controls.Add(Me.btnUpdate)
         Me.GroupBox1.Controls.Add(Me.txtCowqwpy)
-        Me.GroupBox1.Controls.Add(Me.btnAdd)
         Me.GroupBox1.Controls.Add(Me.txtCywqw)
         Me.GroupBox1.Controls.Add(Me.qw)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -181,78 +178,42 @@ Partial Class books
         Me.GroupBox1.Controls.Add(Me.txtaccessNum)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 342)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(775, 135)
+        Me.GroupBox1.Size = New System.Drawing.Size(752, 135)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
-        '
-        'btnExport
-        '
-        Me.btnExport.Location = New System.Drawing.Point(674, 113)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(75, 23)
-        Me.btnExport.TabIndex = 16
-        Me.btnExport.Text = "Export "
-        Me.btnExport.UseVisualStyleBackColor = True
         '
         'remarksCombo
         '
         Me.remarksCombo.DisplayMember = "Accession Number"
         Me.remarksCombo.FormattingEnabled = True
-        Me.remarksCombo.Location = New System.Drawing.Point(469, 101)
+        Me.remarksCombo.Location = New System.Drawing.Point(512, 105)
         Me.remarksCombo.Name = "remarksCombo"
-        Me.remarksCombo.Size = New System.Drawing.Size(135, 21)
+        Me.remarksCombo.Size = New System.Drawing.Size(191, 21)
         Me.remarksCombo.TabIndex = 7
         Me.remarksCombo.Text = "---Select From---"
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(674, 84)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.btnDelete.TabIndex = 4
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'txtqwqRemarks
         '
         Me.txtqwqRemarks.AutoSize = True
-        Me.txtqwqRemarks.Location = New System.Drawing.Point(389, 104)
+        Me.txtqwqRemarks.Location = New System.Drawing.Point(432, 108)
         Me.txtqwqRemarks.Name = "txtqwqRemarks"
         Me.txtqwqRemarks.Size = New System.Drawing.Size(37, 13)
         Me.txtqwqRemarks.TabIndex = 15
         Me.txtqwqRemarks.Text = "Status"
         '
-        'btnUpdate
-        '
-        Me.btnUpdate.Location = New System.Drawing.Point(674, 55)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnUpdate.TabIndex = 3
-        Me.btnUpdate.Text = "Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
-        '
         'txtCowqwpy
         '
         Me.txtCowqwpy.AutoSize = True
-        Me.txtCowqwpy.Location = New System.Drawing.Point(389, 78)
+        Me.txtCowqwpy.Location = New System.Drawing.Point(432, 82)
         Me.txtCowqwpy.Name = "txtCowqwpy"
         Me.txtCowqwpy.Size = New System.Drawing.Size(31, 13)
         Me.txtCowqwpy.TabIndex = 14
         Me.txtCowqwpy.Text = "Copy"
         '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(674, 26)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 2
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
         'txtCywqw
         '
         Me.txtCywqw.AutoSize = True
-        Me.txtCywqw.Location = New System.Drawing.Point(389, 52)
+        Me.txtCywqw.Location = New System.Drawing.Point(432, 56)
         Me.txtCywqw.Name = "txtCywqw"
         Me.txtCywqw.Size = New System.Drawing.Size(76, 13)
         Me.txtCywqw.TabIndex = 13
@@ -261,7 +222,7 @@ Partial Class books
         'qw
         '
         Me.qw.AutoSize = True
-        Me.qw.Location = New System.Drawing.Point(389, 26)
+        Me.qw.Location = New System.Drawing.Point(432, 30)
         Me.qw.Name = "qw"
         Me.qw.Size = New System.Drawing.Size(59, 13)
         Me.qw.TabIndex = 12
@@ -305,23 +266,23 @@ Partial Class books
         '
         'txtCopy
         '
-        Me.txtCopy.Location = New System.Drawing.Point(469, 71)
+        Me.txtCopy.Location = New System.Drawing.Point(512, 75)
         Me.txtCopy.Name = "txtCopy"
-        Me.txtCopy.Size = New System.Drawing.Size(135, 20)
+        Me.txtCopy.Size = New System.Drawing.Size(191, 20)
         Me.txtCopy.TabIndex = 6
         '
         'txtCy
         '
-        Me.txtCy.Location = New System.Drawing.Point(469, 45)
+        Me.txtCy.Location = New System.Drawing.Point(512, 49)
         Me.txtCy.Name = "txtCy"
-        Me.txtCy.Size = New System.Drawing.Size(135, 20)
+        Me.txtCy.Size = New System.Drawing.Size(191, 20)
         Me.txtCy.TabIndex = 5
         '
         'txtPublication
         '
-        Me.txtPublication.Location = New System.Drawing.Point(469, 19)
+        Me.txtPublication.Location = New System.Drawing.Point(512, 23)
         Me.txtPublication.Name = "txtPublication"
-        Me.txtPublication.Size = New System.Drawing.Size(135, 20)
+        Me.txtPublication.Size = New System.Drawing.Size(191, 20)
         Me.txtPublication.TabIndex = 4
         '
         'txtTitle
@@ -353,45 +314,72 @@ Partial Class books
         Me.txtaccessNum.Size = New System.Drawing.Size(230, 20)
         Me.txtaccessNum.TabIndex = 0
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(17, 68)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 16
+        Me.btnExport.Text = "Export "
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(185, 23)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 4
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(98, 23)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 3
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(17, 23)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
         'txtsearch
         '
-        Me.txtsearch.Location = New System.Drawing.Point(278, 17)
+        Me.txtsearch.Location = New System.Drawing.Point(706, 19)
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(532, 20)
+        Me.txtsearch.Size = New System.Drawing.Size(227, 20)
         Me.txtsearch.TabIndex = 2
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(817, 16)
+        Me.btnSearch.Location = New System.Drawing.Point(943, 18)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnSearch.TabIndex = 3
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(26, 21)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Search By:"
-        '
         'searchCombo
         '
         Me.searchCombo.DisplayMember = "Accession Number"
         Me.searchCombo.FormattingEnabled = True
-        Me.searchCombo.Location = New System.Drawing.Point(91, 17)
+        Me.searchCombo.Location = New System.Drawing.Point(571, 19)
         Me.searchCombo.Name = "searchCombo"
         Me.searchCombo.Size = New System.Drawing.Size(121, 21)
         Me.searchCombo.TabIndex = 5
-        Me.searchCombo.Text = "Select From..."
+        Me.searchCombo.Text = "Search By....."
         '
         'booksTotal
         '
         Me.booksTotal.AutoSize = True
-        Me.booksTotal.Location = New System.Drawing.Point(793, 352)
+        Me.booksTotal.Location = New System.Drawing.Point(12, 9)
         Me.booksTotal.Name = "booksTotal"
         Me.booksTotal.Size = New System.Drawing.Size(70, 13)
         Me.booksTotal.TabIndex = 6
@@ -400,7 +388,7 @@ Partial Class books
         'RowNum
         '
         Me.RowNum.AutoSize = True
-        Me.RowNum.Location = New System.Drawing.Point(793, 373)
+        Me.RowNum.Location = New System.Drawing.Point(12, 30)
         Me.RowNum.Name = "RowNum"
         Me.RowNum.Size = New System.Drawing.Size(92, 13)
         Me.RowNum.TabIndex = 7
@@ -408,7 +396,7 @@ Partial Class books
         '
         'btnrefresh
         '
-        Me.btnrefresh.Location = New System.Drawing.Point(796, 397)
+        Me.btnrefresh.Location = New System.Drawing.Point(1024, 18)
         Me.btnrefresh.Name = "btnrefresh"
         Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
         Me.btnrefresh.TabIndex = 8
@@ -417,33 +405,47 @@ Partial Class books
         '
         'btnUpload
         '
-        Me.btnUpload.Location = New System.Drawing.Point(796, 426)
+        Me.btnUpload.Location = New System.Drawing.Point(185, 68)
         Me.btnUpload.Name = "btnUpload"
         Me.btnUpload.Size = New System.Drawing.Size(75, 23)
         Me.btnUpload.TabIndex = 17
         Me.btnUpload.Text = "Upload PDF"
         Me.btnUpload.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnExport)
+        Me.GroupBox2.Controls.Add(Me.btnUpload)
+        Me.GroupBox2.Controls.Add(Me.btnAdd)
+        Me.GroupBox2.Controls.Add(Me.btnDelete)
+        Me.GroupBox2.Controls.Add(Me.btnUpdate)
+        Me.GroupBox2.Location = New System.Drawing.Point(815, 342)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(275, 135)
+        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabStop = False
+        '
         'books
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(963, 489)
-        Me.Controls.Add(Me.btnUpload)
+        Me.ClientSize = New System.Drawing.Size(1122, 489)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnrefresh)
         Me.Controls.Add(Me.RowNum)
         Me.Controls.Add(Me.booksTotal)
         Me.Controls.Add(Me.searchCombo)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtsearch)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "books"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Library Inventory System"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,7 +473,6 @@ Partial Class books
     Friend WithEvents btnDelete As Button
     Friend WithEvents txtsearch As TextBox
     Friend WithEvents btnSearch As Button
-    Friend WithEvents Label5 As Label
     Friend WithEvents searchCombo As ComboBox
     Friend WithEvents booksTotal As Label
     Friend WithEvents remarksCombo As ComboBox
@@ -488,4 +489,5 @@ Partial Class books
     Friend WithEvents remarks As DataGridViewTextBoxColumn
     Friend WithEvents btnrefresh As Button
     Friend WithEvents btnUpload As Button
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

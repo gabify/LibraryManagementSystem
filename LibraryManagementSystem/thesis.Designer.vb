@@ -24,7 +24,6 @@ Partial Class thesis
     Private Sub InitializeComponent()
         Me.thesisTotal = New System.Windows.Forms.Label()
         Me.searchCombo = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -54,14 +53,16 @@ Partial Class thesis
         Me.ThesisNum = New System.Windows.Forms.Label()
         Me.btnrefresh = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'thesisTotal
         '
         Me.thesisTotal.AutoSize = True
-        Me.thesisTotal.Location = New System.Drawing.Point(792, 345)
+        Me.thesisTotal.Location = New System.Drawing.Point(12, 9)
         Me.thesisTotal.Name = "thesisTotal"
         Me.thesisTotal.Size = New System.Drawing.Size(120, 13)
         Me.thesisTotal.TabIndex = 13
@@ -71,24 +72,15 @@ Partial Class thesis
         '
         Me.searchCombo.DisplayMember = "Accession Number"
         Me.searchCombo.FormattingEnabled = True
-        Me.searchCombo.Location = New System.Drawing.Point(90, 10)
+        Me.searchCombo.Location = New System.Drawing.Point(757, 12)
         Me.searchCombo.Name = "searchCombo"
         Me.searchCombo.Size = New System.Drawing.Size(121, 21)
         Me.searchCombo.TabIndex = 12
-        Me.searchCombo.Text = "Select From..."
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 14)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 13)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Search By:"
+        Me.searchCombo.Text = "Search By..."
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(816, 9)
+        Me.btnSearch.Location = New System.Drawing.Point(1163, 12)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnSearch.TabIndex = 10
@@ -97,17 +89,14 @@ Partial Class thesis
         '
         'txtsearch
         '
-        Me.txtsearch.Location = New System.Drawing.Point(277, 10)
+        Me.txtsearch.Location = New System.Drawing.Point(884, 13)
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(532, 20)
+        Me.txtsearch.Size = New System.Drawing.Size(273, 20)
         Me.txtsearch.TabIndex = 9
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnDelete)
-        Me.GroupBox1.Controls.Add(Me.btnUpdate)
         Me.GroupBox1.Controls.Add(Me.txtCowqwpy)
-        Me.GroupBox1.Controls.Add(Me.btnAdd)
         Me.GroupBox1.Controls.Add(Me.txtCywqw)
         Me.GroupBox1.Controls.Add(Me.qw)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -119,15 +108,15 @@ Partial Class thesis
         Me.GroupBox1.Controls.Add(Me.txtTitle)
         Me.GroupBox1.Controls.Add(Me.txtAuthor)
         Me.GroupBox1.Controls.Add(Me.txtCallNum)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 357)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 367)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(775, 109)
+        Me.GroupBox1.Size = New System.Drawing.Size(913, 170)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(674, 76)
+        Me.btnDelete.Location = New System.Drawing.Point(28, 70)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 4
@@ -136,7 +125,7 @@ Partial Class thesis
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(674, 47)
+        Me.btnUpdate.Location = New System.Drawing.Point(28, 41)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 3
@@ -146,7 +135,7 @@ Partial Class thesis
         'txtCowqwpy
         '
         Me.txtCowqwpy.AutoSize = True
-        Me.txtCowqwpy.Location = New System.Drawing.Point(389, 78)
+        Me.txtCowqwpy.Location = New System.Drawing.Point(566, 78)
         Me.txtCowqwpy.Name = "txtCowqwpy"
         Me.txtCowqwpy.Size = New System.Drawing.Size(31, 13)
         Me.txtCowqwpy.TabIndex = 14
@@ -154,7 +143,7 @@ Partial Class thesis
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(674, 18)
+        Me.btnAdd.Location = New System.Drawing.Point(28, 12)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 2
@@ -164,7 +153,7 @@ Partial Class thesis
         'txtCywqw
         '
         Me.txtCywqw.AutoSize = True
-        Me.txtCywqw.Location = New System.Drawing.Point(389, 52)
+        Me.txtCywqw.Location = New System.Drawing.Point(566, 52)
         Me.txtCywqw.Name = "txtCywqw"
         Me.txtCywqw.Size = New System.Drawing.Size(29, 13)
         Me.txtCywqw.TabIndex = 13
@@ -173,7 +162,7 @@ Partial Class thesis
         'qw
         '
         Me.qw.AutoSize = True
-        Me.qw.Location = New System.Drawing.Point(389, 26)
+        Me.qw.Location = New System.Drawing.Point(566, 26)
         Me.qw.Name = "qw"
         Me.qw.Size = New System.Drawing.Size(42, 13)
         Me.qw.TabIndex = 12
@@ -191,7 +180,7 @@ Partial Class thesis
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 82)
+        Me.Label3.Location = New System.Drawing.Point(15, 119)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 10
@@ -208,44 +197,46 @@ Partial Class thesis
         '
         'txtCopy
         '
-        Me.txtCopy.Location = New System.Drawing.Point(469, 71)
+        Me.txtCopy.Location = New System.Drawing.Point(646, 71)
         Me.txtCopy.Name = "txtCopy"
-        Me.txtCopy.Size = New System.Drawing.Size(135, 20)
+        Me.txtCopy.Size = New System.Drawing.Size(204, 20)
         Me.txtCopy.TabIndex = 6
         '
         'txtPy
         '
-        Me.txtPy.Location = New System.Drawing.Point(469, 45)
+        Me.txtPy.Location = New System.Drawing.Point(646, 45)
         Me.txtPy.Name = "txtPy"
-        Me.txtPy.Size = New System.Drawing.Size(135, 20)
+        Me.txtPy.Size = New System.Drawing.Size(204, 20)
         Me.txtPy.TabIndex = 5
         '
         'txtAdviser
         '
-        Me.txtAdviser.Location = New System.Drawing.Point(469, 19)
+        Me.txtAdviser.Location = New System.Drawing.Point(646, 19)
         Me.txtAdviser.Name = "txtAdviser"
-        Me.txtAdviser.Size = New System.Drawing.Size(135, 20)
+        Me.txtAdviser.Size = New System.Drawing.Size(204, 20)
         Me.txtAdviser.TabIndex = 4
         '
         'txtTitle
         '
         Me.txtTitle.Location = New System.Drawing.Point(117, 49)
+        Me.txtTitle.Multiline = True
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(230, 20)
+        Me.txtTitle.Size = New System.Drawing.Size(297, 57)
         Me.txtTitle.TabIndex = 3
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(117, 75)
+        Me.txtAuthor.Location = New System.Drawing.Point(117, 112)
+        Me.txtAuthor.Multiline = True
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(230, 20)
+        Me.txtAuthor.Size = New System.Drawing.Size(297, 39)
         Me.txtAuthor.TabIndex = 2
         '
         'txtCallNum
         '
         Me.txtCallNum.Location = New System.Drawing.Point(117, 19)
         Me.txtCallNum.Name = "txtCallNum"
-        Me.txtCallNum.Size = New System.Drawing.Size(230, 20)
+        Me.txtCallNum.Size = New System.Drawing.Size(297, 20)
         Me.txtCallNum.TabIndex = 1
         '
         'DataGridView1
@@ -257,7 +248,7 @@ Partial Class thesis
         Me.DataGridView1.Location = New System.Drawing.Point(11, 50)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(844, 279)
+        Me.DataGridView1.Size = New System.Drawing.Size(1311, 315)
         Me.DataGridView1.TabIndex = 7
         '
         'id
@@ -325,7 +316,7 @@ Partial Class thesis
         'ThesisNum
         '
         Me.ThesisNum.AutoSize = True
-        Me.ThesisNum.Location = New System.Drawing.Point(792, 373)
+        Me.ThesisNum.Location = New System.Drawing.Point(12, 29)
         Me.ThesisNum.Name = "ThesisNum"
         Me.ThesisNum.Size = New System.Drawing.Size(81, 13)
         Me.ThesisNum.TabIndex = 14
@@ -333,7 +324,7 @@ Partial Class thesis
         '
         'btnrefresh
         '
-        Me.btnrefresh.Location = New System.Drawing.Point(798, 400)
+        Me.btnrefresh.Location = New System.Drawing.Point(1244, 12)
         Me.btnrefresh.Name = "btnrefresh"
         Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
         Me.btnrefresh.TabIndex = 15
@@ -342,33 +333,46 @@ Partial Class thesis
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(798, 428)
+        Me.btnExport.Location = New System.Drawing.Point(133, 43)
         Me.btnExport.Name = "btnExport"
         Me.btnExport.Size = New System.Drawing.Size(75, 23)
         Me.btnExport.TabIndex = 16
         Me.btnExport.Text = "Export"
         Me.btnExport.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnDelete)
+        Me.GroupBox2.Controls.Add(Me.btnExport)
+        Me.GroupBox2.Controls.Add(Me.btnAdd)
+        Me.GroupBox2.Controls.Add(Me.btnUpdate)
+        Me.GroupBox2.Location = New System.Drawing.Point(985, 371)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(334, 109)
+        Me.GroupBox2.TabIndex = 17
+        Me.GroupBox2.TabStop = False
+        '
         'thesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(919, 478)
-        Me.Controls.Add(Me.btnExport)
+        Me.ClientSize = New System.Drawing.Size(1334, 550)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnrefresh)
         Me.Controls.Add(Me.ThesisNum)
         Me.Controls.Add(Me.thesisTotal)
         Me.Controls.Add(Me.searchCombo)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtsearch)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "thesis"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "thesis"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -376,7 +380,6 @@ Partial Class thesis
 
     Friend WithEvents thesisTotal As Label
     Friend WithEvents searchCombo As ComboBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents btnSearch As Button
     Friend WithEvents txtsearch As TextBox
     Friend WithEvents GroupBox1 As GroupBox
@@ -406,4 +409,5 @@ Partial Class thesis
     Friend WithEvents ThesisNum As Label
     Friend WithEvents btnrefresh As Button
     Friend WithEvents btnExport As Button
+    Friend WithEvents GroupBox2 As GroupBox
 End Class
