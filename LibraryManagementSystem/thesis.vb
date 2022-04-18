@@ -5,12 +5,12 @@
     Dim access As New classThesis
     Private Sub thesis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         searchCombo.Items.Clear()
-
         For Each cat As String In category
             searchCombo.Items.Add(cat)
         Next
-
-        DataGridView1.DataSource = access.populateData
+        displayDataInDgv()
+        displayTotalThesis()
+        getNumberOfRows()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -45,23 +45,17 @@
                 access.Insert(dataSet)
 
                 'Update datagridview
-                DataGridView1.Refresh()
-                DataGridView1.DataSource = access.populateData()
-                'booksTotal.Text = "Number of Books: " + booksDb.getTotalNumBooks.ToString
+                displayDataInDgv()
 
                 'Clear textboxes
-                txtCallNum.Text = ""
-                txtAuthor.Text = ""
-                txtTitle.Text = ""
-                txtAdviser.Text = ""
-                txtPy.Text = ""
-                txtCopy.Text = ""
-                txtsearch.Text = ""
+                clearTextboxes()
             Catch ex As FormatException
                 MessageBox.Show("Please input number on copy.")
             End Try
 
         End If
+        displayTotalThesis()
+        getNumberOfRows()
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -78,12 +72,12 @@
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this entry?", "Warning", MessageBoxButtons.YesNo)
         If (result = DialogResult.Yes) Then
-            access.delete(thesisId)
-            DataGridView1.Refresh()
-            DataGridView1.DataSource = access.populateData()
-            'booksTotal.Text = "Number of Books: " + access.getTotalNumBooks.ToString
-            txtsearch.Text = ""
+            access.delete(thesisId, "DELETE FROM tblTheses WHERE ID = @id")
+            displayDataInDgv()
+            clearTextboxes()
         End If
+        displayTotalThesis()
+        getNumberOfRows()
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -99,23 +93,18 @@
             dataSet(5) = txtCopy.Text.Trim
 
             'Update data in database
-            access.update(thesisId, dataSet)
+            access.update(thesisId, dataSet, "UPDATE tblTheses SET callNum = @callNum, title = @title, author = @author, adviser = @adviser, py = @py, copy = @copy WHERE ID = @id")
 
             'Update datagridview
-            DataGridView1.Refresh()
-            DataGridView1.DataSource = access.populateData()
+            displayDataInDgv()
 
             'Clear textboxes
-            txtCallNum.Text = ""
-            txtAuthor.Text = ""
-            txtTitle.Text = ""
-            txtAdviser.Text = ""
-            txtPy.Text = ""
-            txtCopy.Text = ""
-            txtsearch.Text = ""
+            clearTextboxes()
         Catch ex As FormatException
             MessageBox.Show("Please input number on copy")
         End Try
+        displayTotalThesis()
+        getNumberOfRows()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -128,6 +117,7 @@
                 'search(searchCombo.SelectedIndex, txtsearch.Text)
                 DataGridView1.Refresh()
                 DataGridView1.DataSource = access.search(searchCombo.SelectedIndex, txtsearch.Text)
+                getNumberOfRows()
             End If
         End If
     End Sub
@@ -135,5 +125,38 @@
     Private Sub thesis_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Dim form As New main
         form.Show()
+    End Sub
+
+    Private Sub displayTotalThesis()
+        thesisTotal.Text = "Total Number of Thesis: " + access.getTotalNumTheses("SELECT count(*) From tblTheses").ToString
+    End Sub
+    Private Sub clearTextboxes()
+        'Clear textboxes
+        txtCallNum.Text = ""
+        txtAuthor.Text = ""
+        txtTitle.Text = ""
+        txtAdviser.Text = ""
+        txtPy.Text = ""
+        txtCopy.Text = ""
+        txtsearch.Text = ""
+        searchCombo.SelectedIndex = -1
+    End Sub
+    Private Sub getNumberOfRows()
+        ThesisNum.Text = "Number of Thesis: " + DataGridView1.RowCount.ToString
+    End Sub
+    Private Sub displayDataInDgv()
+        DataGridView1.Refresh()
+        DataGridView1.DataSource = access.populateData
+    End Sub
+
+    Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
+        displayDataInDgv()
+        getNumberOfRows()
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim dt As New DataTable
+        dt = DataGridView1.DataSource
+        access.export(dt)
     End Sub
 End Class

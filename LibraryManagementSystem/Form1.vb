@@ -47,22 +47,26 @@ Public Class Form1
     End Sub
 
     Private Sub btnCancel_MouseHover(sender As Object, e As EventArgs) Handles btnCancel.MouseHover
-        btnCancel.BackColor = Color.White
+        btnCancel.BackColor = Color.Transparent
         btnCancel.ForeColor = Color.DarkRed
     End Sub
 
     Private Sub btnCancel_MouseLeave(sender As Object, e As EventArgs) Handles btnCancel.MouseLeave
         btnCancel.BackColor = Color.DarkRed
-        btnCancel.ForeColor = Color.White
+        btnCancel.ForeColor = Color.Transparent
     End Sub
 
     Private Sub btnLogin_MouseHover(sender As Object, e As EventArgs) Handles btnLogin.MouseHover
-        btnLogin.BackColor = Color.White
+        btnLogin.BackColor = Color.Transparent
         btnLogin.ForeColor = Color.DarkRed
     End Sub
 
     Private Sub btnLogin_MouseLeave(sender As Object, e As EventArgs) Handles btnLogin.MouseLeave
         btnLogin.BackColor = Color.DarkRed
-        btnLogin.ForeColor = Color.White
+        btnLogin.ForeColor = Color.Transparent
+    End Sub
+
+    Private Sub txtpassword_Click(sender As Object, e As EventArgs) Handles txtpassword.Click
+        txtpassword.Text = ""
     End Sub
 End Class

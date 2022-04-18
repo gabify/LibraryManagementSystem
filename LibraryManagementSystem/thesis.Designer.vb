@@ -22,7 +22,7 @@ Partial Class thesis
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.booksTotal = New System.Windows.Forms.Label()
+        Me.thesisTotal = New System.Windows.Forms.Label()
         Me.searchCombo = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnSearch = New System.Windows.Forms.Button()
@@ -51,18 +51,21 @@ Partial Class thesis
         Me.adviser = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.py = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.copy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ThesisNum = New System.Windows.Forms.Label()
+        Me.btnrefresh = New System.Windows.Forms.Button()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'booksTotal
+        'thesisTotal
         '
-        Me.booksTotal.AutoSize = True
-        Me.booksTotal.Location = New System.Drawing.Point(792, 345)
-        Me.booksTotal.Name = "booksTotal"
-        Me.booksTotal.Size = New System.Drawing.Size(80, 13)
-        Me.booksTotal.TabIndex = 13
-        Me.booksTotal.Text = "Number Books:"
+        Me.thesisTotal.AutoSize = True
+        Me.thesisTotal.Location = New System.Drawing.Point(792, 345)
+        Me.thesisTotal.Name = "thesisTotal"
+        Me.thesisTotal.Size = New System.Drawing.Size(120, 13)
+        Me.thesisTotal.TabIndex = 13
+        Me.thesisTotal.Text = "Total Number of Thesis:"
         '
         'searchCombo
         '
@@ -319,12 +322,42 @@ Partial Class thesis
         Me.copy.ReadOnly = True
         Me.copy.Width = 56
         '
+        'ThesisNum
+        '
+        Me.ThesisNum.AutoSize = True
+        Me.ThesisNum.Location = New System.Drawing.Point(792, 373)
+        Me.ThesisNum.Name = "ThesisNum"
+        Me.ThesisNum.Size = New System.Drawing.Size(81, 13)
+        Me.ThesisNum.TabIndex = 14
+        Me.ThesisNum.Text = "Number Thesis:"
+        '
+        'btnrefresh
+        '
+        Me.btnrefresh.Location = New System.Drawing.Point(798, 400)
+        Me.btnrefresh.Name = "btnrefresh"
+        Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnrefresh.TabIndex = 15
+        Me.btnrefresh.Text = "Refresh"
+        Me.btnrefresh.UseVisualStyleBackColor = True
+        '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(798, 428)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 16
+        Me.btnExport.Text = "Export"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
         'thesis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(903, 478)
-        Me.Controls.Add(Me.booksTotal)
+        Me.ClientSize = New System.Drawing.Size(919, 478)
+        Me.Controls.Add(Me.btnExport)
+        Me.Controls.Add(Me.btnrefresh)
+        Me.Controls.Add(Me.ThesisNum)
+        Me.Controls.Add(Me.thesisTotal)
         Me.Controls.Add(Me.searchCombo)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnSearch)
@@ -341,7 +374,7 @@ Partial Class thesis
 
     End Sub
 
-    Friend WithEvents booksTotal As Label
+    Friend WithEvents thesisTotal As Label
     Friend WithEvents searchCombo As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents btnSearch As Button
@@ -370,4 +403,7 @@ Partial Class thesis
     Friend WithEvents adviser As DataGridViewTextBoxColumn
     Friend WithEvents py As DataGridViewTextBoxColumn
     Friend WithEvents copy As DataGridViewTextBoxColumn
+    Friend WithEvents ThesisNum As Label
+    Friend WithEvents btnrefresh As Button
+    Friend WithEvents btnExport As Button
 End Class

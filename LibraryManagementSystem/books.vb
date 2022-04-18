@@ -149,28 +149,29 @@
         Dim connect As New connectionClass
         Dim dt As New DataTable
         Dim searchVal As Integer
-        connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value ORDER BY accessionNum"
-        connect.op.Connection = connect.conn
-        connect.op.CommandType = CommandType.Text
-        connect.op.CommandText = connect.operation
+        connect.operation = ""
+        connect.op.Parameters.Clear()
         Try
             If (dbFields(category) Is "accessionNum") Then
+                connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value ORDER BY accessionNum"
                 searchVal = Convert.ToInt32(value)
                 connect.op.Parameters.AddWithValue("@value", searchVal)
             Else
                 Dim val() As String
                 val = value.Split(" ")
                 If (val.Length > 1) Then
-                    connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value AND LIKE @value1 ORDER BY accessionNum"
+                    connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value AND " + dbFields(category) + " LIKE @value1 ORDER BY accessionNum"
                     connect.op.Parameters.AddWithValue("@value", "%" + val(0) + "%")
                     connect.op.Parameters.AddWithValue("@value1", "%" + val(1) + "%")
                 Else
                     connect.operation = "SELECT * FROM tblBooks WHERE " + dbFields(category) + " LIKE @value ORDER BY accessionNum"
                     connect.op.Parameters.AddWithValue("@value", "%" + val(0) + "%")
                 End If
-
             End If
 
+            connect.op.Connection = connect.conn
+            connect.op.CommandType = CommandType.Text
+            connect.op.CommandText = connect.operation
             connect.conn.Open()
             connect.reader.SelectCommand = connect.op
             connect.reader.Fill(dt)
