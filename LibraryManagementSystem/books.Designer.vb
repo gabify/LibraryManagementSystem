@@ -440,7 +440,7 @@ Partial Class books
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "books"
-        Me.Text = "books"
+        Me.Text = "Library Inventory System"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

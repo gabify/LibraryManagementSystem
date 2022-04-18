@@ -16,6 +16,8 @@ Public Class Form1
                 MessageBox.Show("Username does not exist")
             ElseIf (result = 2) Then
                 MessageBox.Show("Incorrect Password")
+            ElseIf (result = 3) Then
+                MessageBox.Show("Account do not have admin credentials.")
             Else
                 Dim frm As New main
                 frm.Show()
@@ -26,5 +28,41 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub passcheck_CheckStateChanged(sender As Object, e As EventArgs) Handles passcheck.CheckStateChanged
+        If (txtpassword.UseSystemPasswordChar = True) Then
+            txtpassword.UseSystemPasswordChar = False
+        Else
+            txtpassword.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
+    End Sub
+
+    Private Sub txtusername_Click(sender As Object, e As EventArgs) Handles txtusername.Click
+        txtusername.Text = ""
+    End Sub
+
+    Private Sub btnCancel_MouseHover(sender As Object, e As EventArgs) Handles btnCancel.MouseHover
+        btnCancel.BackColor = Color.White
+        btnCancel.ForeColor = Color.DarkRed
+    End Sub
+
+    Private Sub btnCancel_MouseLeave(sender As Object, e As EventArgs) Handles btnCancel.MouseLeave
+        btnCancel.BackColor = Color.DarkRed
+        btnCancel.ForeColor = Color.White
+    End Sub
+
+    Private Sub btnLogin_MouseHover(sender As Object, e As EventArgs) Handles btnLogin.MouseHover
+        btnLogin.BackColor = Color.White
+        btnLogin.ForeColor = Color.DarkRed
+    End Sub
+
+    Private Sub btnLogin_MouseLeave(sender As Object, e As EventArgs) Handles btnLogin.MouseLeave
+        btnLogin.BackColor = Color.DarkRed
+        btnLogin.ForeColor = Color.White
     End Sub
 End Class
