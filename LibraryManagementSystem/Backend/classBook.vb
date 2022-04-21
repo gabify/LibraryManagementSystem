@@ -132,15 +132,4 @@ VALUES (@accessnum, @callnum, @author, @title, @publication, @cy, @copy, @remark
         Return result
     End Function
 
-    Public Function selectPDF(ByRef acceesionNum As Integer) As String
-        Dim pdfFile As String = ""
-        Using open As OpenFileDialog = New OpenFileDialog() With {.Filter = "PDF| *.pdf"}
-            If (open.ShowDialog = DialogResult.OK) Then
-                pdfFile = open.FileName
-                Return pdfFile
-            End If
-        End Using
-        Return pdfFile
-    End Function
-
 End Class

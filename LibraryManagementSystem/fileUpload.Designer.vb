@@ -23,10 +23,10 @@ Partial Class fileUpload
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtpath = New System.Windows.Forms.TextBox()
-        Me.btnSelectpdf = New System.Windows.Forms.Button()
-        Me.btnUpload = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnUpload = New System.Windows.Forms.Button()
+        Me.btnSelectpdf = New System.Windows.Forms.Button()
+        Me.txtpath = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,21 +42,14 @@ Partial Class fileUpload
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'txtpath
+        'btnCancel
         '
-        Me.txtpath.Location = New System.Drawing.Point(6, 36)
-        Me.txtpath.Name = "txtpath"
-        Me.txtpath.Size = New System.Drawing.Size(383, 20)
-        Me.txtpath.TabIndex = 0
-        '
-        'btnSelectpdf
-        '
-        Me.btnSelectpdf.Location = New System.Drawing.Point(395, 36)
-        Me.btnSelectpdf.Name = "btnSelectpdf"
-        Me.btnSelectpdf.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelectpdf.TabIndex = 1
-        Me.btnSelectpdf.Text = "Select File"
-        Me.btnSelectpdf.UseVisualStyleBackColor = True
+        Me.btnCancel.Location = New System.Drawing.Point(261, 73)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnUpload
         '
@@ -67,14 +60,21 @@ Partial Class fileUpload
         Me.btnUpload.Text = "Upload"
         Me.btnUpload.UseVisualStyleBackColor = True
         '
-        'btnCancel
+        'btnSelectpdf
         '
-        Me.btnCancel.Location = New System.Drawing.Point(261, 73)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 3
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnSelectpdf.Location = New System.Drawing.Point(395, 36)
+        Me.btnSelectpdf.Name = "btnSelectpdf"
+        Me.btnSelectpdf.Size = New System.Drawing.Size(75, 23)
+        Me.btnSelectpdf.TabIndex = 1
+        Me.btnSelectpdf.Text = "Select File"
+        Me.btnSelectpdf.UseVisualStyleBackColor = True
+        '
+        'txtpath
+        '
+        Me.txtpath.Location = New System.Drawing.Point(6, 36)
+        Me.txtpath.Name = "txtpath"
+        Me.txtpath.Size = New System.Drawing.Size(383, 20)
+        Me.txtpath.TabIndex = 0
         '
         'fileUpload
         '

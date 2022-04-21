@@ -205,7 +205,7 @@
     End Sub
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
-        Dim form As New fileUpload(Convert.ToInt32(txtaccessNum.Text))
+        Dim form As New fileUpload()
         form.Show()
     End Sub
 

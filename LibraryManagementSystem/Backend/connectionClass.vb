@@ -38,6 +38,7 @@ Public Class connectionClass
     End Function
 
     Private Sub logMeIn(ByRef query As String, ByRef username As String, ByRef pass As String)
+        op.Parameters.Clear()
         op.Connection = conn
         op.CommandType = CommandType.Text
         op.CommandText = query
