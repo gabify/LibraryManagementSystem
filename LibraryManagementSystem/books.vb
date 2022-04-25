@@ -4,6 +4,16 @@
     Dim category() As String = {"Accession Number", "Call Number", "Author", "Title", "Publication", "Copyright Year", "Status"}
     Dim dbFields() As String = {"accessionNum", "callNum", "author", "title", "publication", "cy", "remarks"}
     Dim status() As String = {"Available", "Borrowed", "Weeded-out", "Lost"}
+    Dim user As String = ""
+
+    Public Sub New(ByRef userType As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        user = userType
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
     Private Sub books_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.DataSource = booksDb.populateData()
         booksTotal.Text = "Total Number of Books: " + booksDb.getTotalNumBooks.ToString
@@ -185,7 +195,7 @@
     End Sub
 
     Private Sub books_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim form As New main
+        Dim form As New main(user)
         form.Show()
     End Sub
 
@@ -202,11 +212,6 @@
         DataGridView1.Refresh()
         DataGridView1.DataSource = booksDb.populateData()
         RowNum.Text = "Number of Books: " + DataGridView1.RowCount.ToString
-    End Sub
-
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
-        Dim form As New fileUpload()
-        form.Show()
     End Sub
 
     Private Sub clearTextbox()

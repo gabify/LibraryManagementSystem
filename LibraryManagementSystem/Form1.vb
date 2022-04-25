@@ -10,7 +10,7 @@ Public Class Form1
         ElseIf (Not db.ifempty(txtusername.Text) AndAlso db.ifempty(txtpassword.Text)) Then
             MessageBox.Show("Please input Password")
         Else
-            Dim result As Integer
+            Dim result As String
             result = db.login(txtusername.Text.Trim, txtpassword.Text.Trim)
             If (result = 1) Then
                 MessageBox.Show("Username does not exist")
@@ -19,7 +19,7 @@ Public Class Form1
             ElseIf (result = 3) Then
                 MessageBox.Show("Account do not have admin credentials.")
             Else
-                Dim frm As New main
+                Dim frm As New main(db.getUserType(txtusername.Text.Trim))
                 frm.Show()
                 Me.Close()
             End If

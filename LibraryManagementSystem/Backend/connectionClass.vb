@@ -37,6 +37,14 @@ Public Class connectionClass
         End If
     End Function
 
+    Public Function getUserType(ByRef username As String) As String
+        checkUserType("SELECT userType FROM tblUsers WHERE username = @username", username)
+        conn.Open()
+        Dim userType As String = op.ExecuteScalar.ToString
+        conn.Close()
+        Return userType
+    End Function
+
     Private Sub logMeIn(ByRef query As String, ByRef username As String, ByRef pass As String)
         op.Parameters.Clear()
         op.Connection = conn
