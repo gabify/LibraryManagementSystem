@@ -75,12 +75,11 @@ Partial Class main
         '
         'btnUsers
         '
-        Me.btnUsers.Enabled = False
         Me.btnUsers.Location = New System.Drawing.Point(33, 231)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(103, 42)
         Me.btnUsers.TabIndex = 4
-        Me.btnUsers.Text = "Users"
+        Me.btnUsers.Text = "Borrow/Return"
         Me.btnUsers.UseVisualStyleBackColor = True
         '
         'btnExit

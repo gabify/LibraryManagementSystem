@@ -7,60 +7,6 @@ Public Class connectionClass
     Public dr As OleDbDataReader
     Public operation As String
     Dim val As String
-
-
-
-    Public Function login(ByVal username As String, ByVal password As String) As Integer
-        logMeIn("SELECT password FROM tblUsers WHERE username = @username", username, password)
-        Dim ob As Object
-        conn.Open()
-        ob = op.ExecuteScalar
-        conn.Close()
-        If (ob Is Nothing) Then
-            Return 1
-        Else
-            val = ob.ToString()
-            If (val = password) Then
-                checkUserType("SELECT userType FROM tblUsers WHERE username = @username", username)
-                conn.Open()
-                Dim userType As String = op.ExecuteScalar.ToString
-                conn.Close()
-
-                If (userType = "admin" Or userType = "librarian") Then
-                    Return 0
-                Else
-                    Return 3
-                End If
-            Else
-                Return 2
-            End If
-        End If
-    End Function
-
-    Public Function getUserType(ByRef username As String) As String
-        checkUserType("SELECT userType FROM tblUsers WHERE username = @username", username)
-        conn.Open()
-        Dim userType As String = op.ExecuteScalar.ToString
-        conn.Close()
-        Return userType
-    End Function
-
-    Private Sub logMeIn(ByRef query As String, ByRef username As String, ByRef pass As String)
-        op.Parameters.Clear()
-        op.Connection = conn
-        op.CommandType = CommandType.Text
-        op.CommandText = query
-        op.Parameters.AddWithValue("@username", username)
-    End Sub
-
-    Private Sub checkUserType(ByRef query As String, ByRef username As String)
-        op.Parameters.Clear()
-        op.Connection = conn
-        op.CommandType = CommandType.Text
-        op.CommandText = query
-        op.Parameters.AddWithValue("@username", username)
-    End Sub
-
     Public Function ifempty(ByVal value As String) As Boolean
         If (value Is "") Then
             Return True

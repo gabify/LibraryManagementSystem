@@ -115,27 +115,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\classBook.vb" />
+    <Compile Include="Backend\classBorrow.vb" />
+    <Compile Include="Backend\classJournal.vb" />
     <Compile Include="Backend\classThesis.vb" />
-    <Compile Include="Backend\classUser.vb" />
     <Compile Include="Backend\connectionClass.vb" />
-    <Compile Include="Backend\gdClass.vb" />
+    <Compile Include="Backend\journal.Designer.vb">
+      <DependentUpon>journal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\journal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="books.Designer.vb">
       <DependentUpon>books.vb</DependentUpon>
     </Compile>
     <Compile Include="books.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fileUpload.Designer.vb">
-      <DependentUpon>fileUpload.vb</DependentUpon>
+    <Compile Include="BorrowAndReturn.Designer.vb">
+      <DependentUpon>BorrowAndReturn.vb</DependentUpon>
     </Compile>
-    <Compile Include="fileUpload.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="BorrowAndReturn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.vb">
@@ -169,22 +168,16 @@
     <Compile Include="thesis.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="users.Designer.vb">
-      <DependentUpon>users.vb</DependentUpon>
-    </Compile>
-    <Compile Include="users.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Backend\journal.resx">
+      <DependentUpon>journal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="books.resx">
       <DependentUpon>books.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fileUpload.resx">
-      <DependentUpon>fileUpload.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="BorrowAndReturn.resx">
+      <DependentUpon>BorrowAndReturn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.vb</DependentUpon>
@@ -197,9 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thesis.resx">
       <DependentUpon>thesis.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="users.resx">
-      <DependentUpon>users.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

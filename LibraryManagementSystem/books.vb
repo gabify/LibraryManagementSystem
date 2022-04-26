@@ -4,16 +4,7 @@
     Dim category() As String = {"Accession Number", "Call Number", "Author", "Title", "Publication", "Copyright Year", "Status"}
     Dim dbFields() As String = {"accessionNum", "callNum", "author", "title", "publication", "cy", "remarks"}
     Dim status() As String = {"Available", "Borrowed", "Weeded-out", "Lost"}
-    Dim user As String = ""
 
-    Public Sub New(ByRef userType As String)
-
-        ' This call is required by the designer.
-        InitializeComponent()
-        user = userType
-        ' Add any initialization after the InitializeComponent() call.
-
-    End Sub
     Private Sub books_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.DataSource = booksDb.populateData()
         booksTotal.Text = "Total Number of Books: " + booksDb.getTotalNumBooks.ToString
@@ -195,7 +186,7 @@
     End Sub
 
     Private Sub books_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim form As New main(user)
+        Dim form As New main()
         form.Show()
     End Sub
 
@@ -226,5 +217,13 @@
         txtsearch.Text = ""
         remarksCombo.SelectedIndex = -1
         searchCombo.SelectedIndex = -1
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub searchCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles searchCombo.SelectedIndexChanged
+
     End Sub
 End Class

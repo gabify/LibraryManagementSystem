@@ -3,16 +3,8 @@
     Dim dbfields() As String = {"callNum", "title", "author", "adviser", "py"}
     Dim thesisId As Integer
     Dim access As New classThesis
-    Dim user As String = ""
 
-    Public Sub New(ByRef userType As String)
 
-        ' This call is required by the designer.
-        InitializeComponent()
-        user = userType
-        ' Add any initialization after the InitializeComponent() call.
-
-    End Sub
     Private Sub thesis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         searchCombo.Items.Clear()
         For Each cat As String In category
@@ -133,7 +125,7 @@
     End Sub
 
     Private Sub thesis_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Dim form As New main(user)
+        Dim form As New main()
         form.Show()
     End Sub
 
