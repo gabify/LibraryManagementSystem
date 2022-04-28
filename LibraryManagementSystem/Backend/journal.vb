@@ -33,7 +33,7 @@ VALUES (@title, @frequency)")
         dataset(0) = txtTitle.Text.Trim
         dataset(1) = txtfrequency.Text.Trim
 
-        journal.Update(dataset, "UPDATE tblJournals SET title = @title, frequency = @frequency")
+        journal.Update(dataset, "UPDATE tblJournals SET title = @title, frequency = @frequency WHERE ID = @id", DataGridView1.CurrentRow.Cells(0).Value.ToString)
         loadData()
         getNumbers()
     End Sub
@@ -96,5 +96,10 @@ VALUES (@title, @frequency)")
         ElseIf (rdFrequency.Checked = True) Then
             DataGridView1.DataSource = cjournal.searchTitle(txtsearch.Text.Trim, "SELECT * FROM tblJournals WHERE frequency LIKE @keyword")
         End If
+    End Sub
+
+    Private Sub journal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Dim form As New main
+        form.Show()
     End Sub
 End Class

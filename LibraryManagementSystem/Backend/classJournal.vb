@@ -35,12 +35,13 @@ VALUES (@title, @frequency)"
     End Function
 
     'Update data in database
-    Public Function Update(ByVal dataSet As Array, ByRef query As String) As Integer
-        connect.operation = "UPDATE tblJournals SET title = @title, frequency = @frequency"
+    Public Function Update(ByVal dataSet As Array, ByRef query As String, ByRef id As String) As Integer
+        connect.operation = "UPDATE tblJournals SET title = @title, frequency = @frequency WHERE ID = @id"
         connect.op.Parameters.Clear()
         connect.op.Connection = connect.conn
         connect.op.CommandType = CommandType.Text
         connect.op.CommandText = query
+        connect.op.Parameters.AddWithValue("@id", Convert.ToInt32(id))
         connect.op.Parameters.AddWithValue("@title", dataSet(0))
         connect.op.Parameters.AddWithValue("@frequency", dataSet(1))
         connect.conn.Open()

@@ -129,10 +129,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\BookReturn.Designer.vb">
+      <DependentUpon>BookReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\BookReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Backend\classBook.vb" />
     <Compile Include="Backend\classBorrow.vb" />
     <Compile Include="Backend\classJournal.vb" />
     <Compile Include="Backend\classRegistration.vb" />
+    <Compile Include="Backend\classReturn.vb" />
     <Compile Include="Backend\classThesis.vb" />
     <Compile Include="Backend\connectionClass.vb" />
     <Compile Include="Backend\journal.Designer.vb">
@@ -198,6 +205,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Backend\BookReturn.resx">
+      <DependentUpon>BookReturn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Backend\journal.resx">
       <DependentUpon>journal.vb</DependentUpon>
     </EmbeddedResource>

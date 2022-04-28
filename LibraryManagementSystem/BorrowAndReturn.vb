@@ -1,32 +1,5 @@
 ﻿Public Class BorrowAndReturn
     Dim borrowFunc As New classBorrow
-    'Return Functions
-
-    Private Sub getAllBorrowedBooksStudent()
-        dgvBorrowedBooks.Refresh()
-        dgvBorrowedBooks.DataSource = borrowFunc.getAllBooks("SELECT
- tblBorrowStudent.ID, tblBooks.accessionNum, tblBooks.title, tblStudentInfo.srcode, tblStudentInfo.studentName, tblBorrowStudent.dateBorrowed
-from ( tblBooks inner join tblBorrowStudent on tblBooks.ID = tblBorrowStudent.bookID) inner join tblStudentInfo on tblStudentInfo.ID = tblBorrowStudent.studentId where tblBorrowStudent.isReturned = 0 ORDER BY accessionNum")
-    End Sub
-
-    Private Sub getAllBorrowedBooksFaculty()
-        dgvBorrowedBooks.Refresh()
-        dgvBorrowedBooks.DataSource = borrowFunc.getAllBooks("SELECT
-tblBooks.accessionNum, tblBooks.title, tblFacultyInfo.employeeNum, tblFacultyInfo.employeeName, tblFacultyBorrow.dateBorrowed
-from ( tblBooks inner join tblFacultyBorrow on tblBooks.ID = tblFacultyBorrow.bookId) inner join tblFacultyInfo on tblFacultyInfo.employeeId = tblFacultyBorrow.employeeId where tblFacultyBorrow.isReturned = 0")
-    End Sub
-
-    Private Sub getAllReturnedBooks()
-        dgvReturnedBooks.Refresh()
-        dgvReturnedBooks.DataSource = borrowFunc.getAllBooks("SELECT
- tblReturnedBookStudent.ID, tblBooks.accessionNum, tblBooks.title, tblReturnedBookStudent.dateReturned
-from (tblBooks inner join tblReturnedBookStudent on tblBooks.accessionNum = tblReturnedBookStudent.accessionNum) order by tblBooks.accessionNum")
-    End Sub
-
-    Private Sub returnBook()
-        MessageBox.Show(borrowFunc.returnBook(dgvBorrowedBooks.CurrentRow.Cells(0).Value.ToString, txtaccessNumreturn.Text, txtsrcodereturn.Text))
-    End Sub
-
 
     'Faculty Functions
     Private Sub populateBookFaculty()
@@ -182,8 +155,6 @@ from (tblBooks inner join tblReturnedBookStudent on tblBooks.accessionNum = tblR
         populateStudent()
         populateBookFaculty()
         populateEmployee()
-        getAllBorrowedBooksStudent()
-        getAllReturnedBooks()
 
     End Sub
 
@@ -270,26 +241,8 @@ from (tblBooks inner join tblReturnedBookStudent on tblBooks.accessionNum = tblR
         clearFieldsFaculty()
     End Sub
 
-    Private Sub rdStudent_CheckedChanged(sender As Object, e As EventArgs)
-        getAllBorrowedBooksStudent()
-    End Sub
-
-    Private Sub rdEmployee_CheckedChanged(sender As Object, e As EventArgs)
-        getAllBorrowedBooksFaculty()
-    End Sub
-
-    Private Sub dgvBorrowedBooks_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvBorrowedBooks.CellClick
-        txtaccessNumreturn.Text = dgvBorrowedBooks.CurrentRow.Cells(1).Value.ToString
-        txtTitlereturn.Text = dgvBorrowedBooks.CurrentRow.Cells(2).Value.ToString
-        txtsrcodereturn.Text = dgvBorrowedBooks.CurrentRow.Cells(3).Value.ToString
-        txtnamereturn.Text = dgvBorrowedBooks.CurrentRow.Cells(4).Value.ToString
-
-
-    End Sub
-
-    Private Sub btnBorrowVisitor_Click(sender As Object, e As EventArgs) Handles btnBorrowVisitor.Click
-        returnBook()
-        getAllBorrowedBooksStudent()
-        getAllReturnedBooks()
+    Private Sub BorrowAndReturn_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Dim form As New main
+        form.Show()
     End Sub
 End Class

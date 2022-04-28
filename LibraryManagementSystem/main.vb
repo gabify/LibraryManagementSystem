@@ -27,4 +27,10 @@
         form.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
+        Dim form As New BookReturn
+        form.Show()
+        Me.Close()
+    End Sub
 End Class

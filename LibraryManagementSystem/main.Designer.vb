@@ -30,12 +30,13 @@ Partial Class main
         Me.btnUsers = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnReturn = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBooks
         '
-        Me.btnBooks.Location = New System.Drawing.Point(33, 46)
+        Me.btnBooks.Location = New System.Drawing.Point(33, 19)
         Me.btnBooks.Name = "btnBooks"
         Me.btnBooks.Size = New System.Drawing.Size(103, 42)
         Me.btnBooks.TabIndex = 0
@@ -44,7 +45,7 @@ Partial Class main
         '
         'btnTheses
         '
-        Me.btnTheses.Location = New System.Drawing.Point(33, 108)
+        Me.btnTheses.Location = New System.Drawing.Point(33, 79)
         Me.btnTheses.Name = "btnTheses"
         Me.btnTheses.Size = New System.Drawing.Size(103, 42)
         Me.btnTheses.TabIndex = 1
@@ -53,7 +54,7 @@ Partial Class main
         '
         'btnJournal
         '
-        Me.btnJournal.Location = New System.Drawing.Point(33, 175)
+        Me.btnJournal.Location = New System.Drawing.Point(33, 137)
         Me.btnJournal.Name = "btnJournal"
         Me.btnJournal.Size = New System.Drawing.Size(103, 42)
         Me.btnJournal.TabIndex = 2
@@ -62,6 +63,7 @@ Partial Class main
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnReturn)
         Me.GroupBox1.Controls.Add(Me.btnUsers)
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnBooks)
@@ -75,16 +77,16 @@ Partial Class main
         '
         'btnUsers
         '
-        Me.btnUsers.Location = New System.Drawing.Point(33, 231)
+        Me.btnUsers.Location = New System.Drawing.Point(33, 197)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(103, 42)
         Me.btnUsers.TabIndex = 4
-        Me.btnUsers.Text = "Borrow/Return"
+        Me.btnUsers.Text = "Borrow"
         Me.btnUsers.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(33, 287)
+        Me.btnExit.Location = New System.Drawing.Point(33, 308)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(103, 42)
         Me.btnExit.TabIndex = 3
@@ -101,6 +103,15 @@ Partial Class main
         Me.GroupBox2.Size = New System.Drawing.Size(493, 359)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
+        '
+        'btnReturn
+        '
+        Me.btnReturn.Location = New System.Drawing.Point(33, 251)
+        Me.btnReturn.Name = "btnReturn"
+        Me.btnReturn.Size = New System.Drawing.Size(103, 42)
+        Me.btnReturn.TabIndex = 5
+        Me.btnReturn.Text = "Return"
+        Me.btnReturn.UseVisualStyleBackColor = True
         '
         'main
         '
@@ -125,4 +136,5 @@ Partial Class main
     Friend WithEvents btnExit As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnUsers As Button
+    Friend WithEvents btnReturn As Button
 End Class
