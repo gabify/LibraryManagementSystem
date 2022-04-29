@@ -28,12 +28,8 @@ VALUES (@title, @frequency)")
         clearFields()
     End Sub
     Private Sub updateData()
-        Dim dataset(1) As String
         Dim journal As New classJournal
-        dataset(0) = txtTitle.Text.Trim
-        dataset(1) = txtfrequency.Text.Trim
-
-        journal.Update(dataset, "UPDATE tblJournals SET title = @title, frequency = @frequency WHERE ID = @id", DataGridView1.CurrentRow.Cells(0).Value.ToString)
+        journal.Update(txtTitle.Text.Trim, txtfrequency.Text.Trim, "UPDATE tblJournals SET title = @title, frequency = @frequency WHERE ID = @id", Convert.ToInt32(DataGridView1.CurrentRow.Cells(0).Value))
         loadData()
         getNumbers()
     End Sub

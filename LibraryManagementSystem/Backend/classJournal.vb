@@ -35,20 +35,20 @@ VALUES (@title, @frequency)"
     End Function
 
     'Update data in database
-    Public Function Update(ByVal dataSet As Array, ByRef query As String, ByRef id As String) As Integer
-        connect.operation = "UPDATE tblJournals SET title = @title, frequency = @frequency WHERE ID = @id"
-        connect.op.Parameters.Clear()
-        connect.op.Connection = connect.conn
-        connect.op.CommandType = CommandType.Text
-        connect.op.CommandText = query
-        connect.op.Parameters.AddWithValue("@id", Convert.ToInt32(id))
-        connect.op.Parameters.AddWithValue("@title", dataSet(0))
-        connect.op.Parameters.AddWithValue("@frequency", dataSet(1))
-        connect.conn.Open()
-        Dim result = connect.op.ExecuteNonQuery()
-        connect.conn.Close()
-        Return result
-    End Function
+    Public Sub Update(ByRef title As String, ByRef frequency As String, ByRef query As String, ByRef id As Integer)
+        Dim result As Integer
+        Dim back1 As New connectionClass
+        back1.op.Parameters.Clear()
+        back1.op.Connection = back1.conn
+        back1.op.CommandType = CommandType.Text
+        back1.op.CommandText = "UPDATE tblJournals SET [title] = @title, [frequency] = @frequency WHERE id = @id"
+        back1.op.Parameters.AddWithValue("@title", title)
+        back1.op.Parameters.AddWithValue("@frequency", frequency)
+        back1.op.Parameters.AddWithValue("@id", id)
+        back1.conn.Open()
+        result = back1.op.ExecuteNonQuery()
+        back1.conn.Close()
+    End Sub
 
     'Delete data in database
     Public Function delete(ByVal id As Integer, ByRef query As String) As Integer
