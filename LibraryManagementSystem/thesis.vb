@@ -161,4 +161,40 @@
         dt = DataGridView1.DataSource
         access.export(dt)
     End Sub
+
+    Private Sub txtCallNum_TextChanged(sender As Object, e As EventArgs) Handles txtCallNum.TextChanged
+
+    End Sub
+
+    Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
+
+    End Sub
+
+    Private Sub txtAuthor_TextChanged(sender As Object, e As EventArgs) Handles txtAuthor.TextChanged
+
+    End Sub
+
+    Private Sub txtCopy_TextChanged(sender As Object, e As EventArgs) Handles txtCopy.TextChanged
+
+    End Sub
+
+    Private Sub txtPy_TextChanged(sender As Object, e As EventArgs) Handles txtPy.TextChanged
+
+    End Sub
+
+    Private Sub txtAdviser_TextChanged(sender As Object, e As EventArgs) Handles txtAdviser.TextChanged
+
+    End Sub
+
+    Private Sub searchCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles searchCombo.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
+
+    End Sub
 End Class

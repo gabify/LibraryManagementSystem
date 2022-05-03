@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data
 Public Class connectionClass
-    Public conn As New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Windows 10 Lite\Desktop\AccessDatabases\LibraryManagementSystemdb.mdb")
+    Public conn As New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Windows 10 Lite\Desktop\LibraryManagementSystemdb.mdb")
+    'Public conn As New OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|LibraryManagementSystemdb.mdb")
     Public op As New OleDbCommand
     Public reader As New OleDbDataAdapter
     Public dr As OleDbDataReader

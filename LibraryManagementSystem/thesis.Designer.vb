@@ -22,15 +22,16 @@ Partial Class thesis
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.thesisTotal = New System.Windows.Forms.Label()
         Me.searchCombo = New System.Windows.Forms.ComboBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.txtCowqwpy = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
         Me.txtCywqw = New System.Windows.Forms.Label()
         Me.qw = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -42,6 +43,13 @@ Partial Class thesis
         Me.txtTitle = New System.Windows.Forms.TextBox()
         Me.txtAuthor = New System.Windows.Forms.TextBox()
         Me.txtCallNum = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.callnum = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,6 +62,7 @@ Partial Class thesis
         Me.btnrefresh = New System.Windows.Forms.Button()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -62,37 +71,51 @@ Partial Class thesis
         'thesisTotal
         '
         Me.thesisTotal.AutoSize = True
-        Me.thesisTotal.Location = New System.Drawing.Point(12, 9)
+        Me.thesisTotal.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.thesisTotal.Location = New System.Drawing.Point(14, 10)
         Me.thesisTotal.Name = "thesisTotal"
-        Me.thesisTotal.Size = New System.Drawing.Size(120, 13)
+        Me.thesisTotal.Size = New System.Drawing.Size(164, 21)
         Me.thesisTotal.TabIndex = 13
         Me.thesisTotal.Text = "Total Number of Thesis:"
         '
         'searchCombo
         '
+        Me.searchCombo.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.searchCombo.DisplayMember = "Accession Number"
+        Me.searchCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.searchCombo.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchCombo.FormattingEnabled = True
-        Me.searchCombo.Location = New System.Drawing.Point(757, 12)
+        Me.searchCombo.Location = New System.Drawing.Point(581, 35)
         Me.searchCombo.Name = "searchCombo"
-        Me.searchCombo.Size = New System.Drawing.Size(121, 21)
+        Me.searchCombo.Size = New System.Drawing.Size(140, 25)
         Me.searchCombo.TabIndex = 12
         Me.searchCombo.Text = "Search By..."
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(1163, 12)
+        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.Location = New System.Drawing.Point(965, 24)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.Size = New System.Drawing.Size(87, 38)
         Me.btnSearch.TabIndex = 10
         Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtsearch
         '
-        Me.txtsearch.Location = New System.Drawing.Point(884, 13)
+        Me.txtsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtsearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtsearch.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtsearch.Location = New System.Drawing.Point(729, 38)
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(273, 20)
+        Me.txtsearch.Size = New System.Drawing.Size(231, 20)
         Me.txtsearch.TabIndex = 9
+        Me.txtsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'GroupBox1
         '
@@ -108,147 +131,263 @@ Partial Class thesis
         Me.GroupBox1.Controls.Add(Me.txtTitle)
         Me.GroupBox1.Controls.Add(Me.txtAuthor)
         Me.GroupBox1.Controls.Add(Me.txtCallNum)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 367)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Location = New System.Drawing.Point(-2, 441)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(913, 170)
+        Me.GroupBox1.Size = New System.Drawing.Size(744, 283)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(28, 70)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.btnDelete.TabIndex = 4
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.Location = New System.Drawing.Point(28, 41)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnUpdate.TabIndex = 3
-        Me.btnUpdate.Text = "Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'txtCowqwpy
         '
         Me.txtCowqwpy.AutoSize = True
-        Me.txtCowqwpy.Location = New System.Drawing.Point(566, 78)
+        Me.txtCowqwpy.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCowqwpy.Location = New System.Drawing.Point(500, 167)
         Me.txtCowqwpy.Name = "txtCowqwpy"
-        Me.txtCowqwpy.Size = New System.Drawing.Size(31, 13)
+        Me.txtCowqwpy.Size = New System.Drawing.Size(36, 17)
         Me.txtCowqwpy.TabIndex = 14
         Me.txtCowqwpy.Text = "Copy"
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(28, 12)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 2
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'txtCywqw
         '
         Me.txtCywqw.AutoSize = True
-        Me.txtCywqw.Location = New System.Drawing.Point(566, 52)
+        Me.txtCywqw.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCywqw.Location = New System.Drawing.Point(500, 90)
         Me.txtCywqw.Name = "txtCywqw"
-        Me.txtCywqw.Size = New System.Drawing.Size(29, 13)
+        Me.txtCywqw.Size = New System.Drawing.Size(30, 17)
         Me.txtCywqw.TabIndex = 13
         Me.txtCywqw.Text = "Year"
         '
         'qw
         '
         Me.qw.AutoSize = True
-        Me.qw.Location = New System.Drawing.Point(566, 26)
+        Me.qw.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.qw.Location = New System.Drawing.Point(500, 25)
         Me.qw.Name = "qw"
-        Me.qw.Size = New System.Drawing.Size(42, 13)
+        Me.qw.Size = New System.Drawing.Size(48, 17)
         Me.qw.TabIndex = 12
         Me.qw.Text = "Adviser"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 52)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(16, 90)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(27, 13)
+        Me.Label4.Size = New System.Drawing.Size(32, 17)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Title"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 119)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(16, 186)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
+        Me.Label3.Size = New System.Drawing.Size(45, 17)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Author"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 22)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(17, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.Size = New System.Drawing.Size(48, 17)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Call No"
         '
         'txtCopy
         '
-        Me.txtCopy.Location = New System.Drawing.Point(646, 71)
+        Me.txtCopy.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtCopy.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCopy.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCopy.Location = New System.Drawing.Point(504, 190)
         Me.txtCopy.Name = "txtCopy"
-        Me.txtCopy.Size = New System.Drawing.Size(204, 20)
+        Me.txtCopy.Size = New System.Drawing.Size(171, 20)
         Me.txtCopy.TabIndex = 6
         '
         'txtPy
         '
-        Me.txtPy.Location = New System.Drawing.Point(646, 45)
+        Me.txtPy.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtPy.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPy.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPy.Location = New System.Drawing.Point(504, 117)
         Me.txtPy.Name = "txtPy"
-        Me.txtPy.Size = New System.Drawing.Size(204, 20)
+        Me.txtPy.Size = New System.Drawing.Size(171, 20)
         Me.txtPy.TabIndex = 5
         '
         'txtAdviser
         '
-        Me.txtAdviser.Location = New System.Drawing.Point(646, 19)
+        Me.txtAdviser.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAdviser.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAdviser.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAdviser.Location = New System.Drawing.Point(504, 52)
         Me.txtAdviser.Name = "txtAdviser"
-        Me.txtAdviser.Size = New System.Drawing.Size(204, 20)
+        Me.txtAdviser.Size = New System.Drawing.Size(171, 20)
         Me.txtAdviser.TabIndex = 4
         '
         'txtTitle
         '
-        Me.txtTitle.Location = New System.Drawing.Point(117, 49)
+        Me.txtTitle.BackColor = System.Drawing.Color.White
+        Me.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTitle.Location = New System.Drawing.Point(21, 113)
         Me.txtTitle.Multiline = True
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(297, 57)
+        Me.txtTitle.Size = New System.Drawing.Size(405, 66)
         Me.txtTitle.TabIndex = 3
         '
         'txtAuthor
         '
-        Me.txtAuthor.Location = New System.Drawing.Point(117, 112)
+        Me.txtAuthor.BackColor = System.Drawing.Color.White
+        Me.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAuthor.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAuthor.Location = New System.Drawing.Point(21, 210)
         Me.txtAuthor.Multiline = True
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(297, 39)
+        Me.txtAuthor.Size = New System.Drawing.Size(405, 45)
         Me.txtAuthor.TabIndex = 2
         '
         'txtCallNum
         '
-        Me.txtCallNum.Location = New System.Drawing.Point(117, 19)
+        Me.txtCallNum.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtCallNum.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCallNum.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCallNum.Location = New System.Drawing.Point(21, 52)
         Me.txtCallNum.Name = "txtCallNum"
-        Me.txtCallNum.Size = New System.Drawing.Size(297, 20)
+        Me.txtCallNum.Size = New System.Drawing.Size(405, 20)
         Me.txtCallNum.TabIndex = 1
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(503, 208)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(172, 15)
+        Me.Label7.TabIndex = 21
+        Me.Label7.Text = "_________________________________"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(503, 133)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(172, 15)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "_________________________________"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(505, 62)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(172, 15)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "_________________________________"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(15, 65)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(402, 15)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "_______________________________________________________________________________"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnDelete.FlatAppearance.BorderSize = 0
+        Me.btnDelete.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.ForeColor = System.Drawing.Color.White
+        Me.btnDelete.Location = New System.Drawing.Point(80, 157)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(261, 39)
+        Me.btnDelete.TabIndex = 4
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnUpdate.FlatAppearance.BorderSize = 0
+        Me.btnUpdate.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.Color.White
+        Me.btnUpdate.Location = New System.Drawing.Point(80, 99)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(261, 39)
+        Me.btnUpdate.TabIndex = 3
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAdd.FlatAppearance.BorderSize = 0
+        Me.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.Color.White
+        Me.btnAdd.Location = New System.Drawing.Point(80, 41)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(261, 39)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.callnum, Me.title, Me.author, Me.adviser, Me.py, Me.copy})
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 50)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView1.Location = New System.Drawing.Point(-2, 68)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1311, 315)
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView1.Size = New System.Drawing.Size(1143, 367)
         Me.DataGridView1.TabIndex = 7
         '
         'id
@@ -266,7 +405,7 @@ Partial Class thesis
         Me.callnum.HeaderText = "Call No"
         Me.callnum.Name = "callnum"
         Me.callnum.ReadOnly = True
-        Me.callnum.Width = 66
+        Me.callnum.Width = 70
         '
         'title
         '
@@ -275,7 +414,7 @@ Partial Class thesis
         Me.title.HeaderText = "Title"
         Me.title.Name = "title"
         Me.title.ReadOnly = True
-        Me.title.Width = 52
+        Me.title.Width = 55
         '
         'author
         '
@@ -284,7 +423,7 @@ Partial Class thesis
         Me.author.HeaderText = "Author"
         Me.author.Name = "author"
         Me.author.ReadOnly = True
-        Me.author.Width = 63
+        Me.author.Width = 69
         '
         'adviser
         '
@@ -293,7 +432,7 @@ Partial Class thesis
         Me.adviser.HeaderText = "Adviser"
         Me.adviser.Name = "adviser"
         Me.adviser.ReadOnly = True
-        Me.adviser.Width = 67
+        Me.adviser.Width = 71
         '
         'py
         '
@@ -311,34 +450,48 @@ Partial Class thesis
         Me.copy.HeaderText = "Copy"
         Me.copy.Name = "copy"
         Me.copy.ReadOnly = True
-        Me.copy.Width = 56
+        Me.copy.Width = 59
         '
         'ThesisNum
         '
         Me.ThesisNum.AutoSize = True
-        Me.ThesisNum.Location = New System.Drawing.Point(12, 29)
+        Me.ThesisNum.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.ThesisNum.Location = New System.Drawing.Point(14, 38)
         Me.ThesisNum.Name = "ThesisNum"
-        Me.ThesisNum.Size = New System.Drawing.Size(81, 13)
+        Me.ThesisNum.Size = New System.Drawing.Size(113, 21)
         Me.ThesisNum.TabIndex = 14
         Me.ThesisNum.Text = "Number Thesis:"
         '
         'btnrefresh
         '
-        Me.btnrefresh.Location = New System.Drawing.Point(1244, 12)
+        Me.btnrefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnrefresh.FlatAppearance.BorderSize = 0
+        Me.btnrefresh.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnrefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnrefresh.ForeColor = System.Drawing.Color.White
+        Me.btnrefresh.Location = New System.Drawing.Point(1060, 24)
         Me.btnrefresh.Name = "btnrefresh"
-        Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnrefresh.Size = New System.Drawing.Size(87, 38)
         Me.btnrefresh.TabIndex = 15
         Me.btnrefresh.Text = "Refresh"
-        Me.btnrefresh.UseVisualStyleBackColor = True
+        Me.btnrefresh.UseVisualStyleBackColor = False
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(133, 43)
+        Me.btnExport.BackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExport.FlatAppearance.BorderSize = 0
+        Me.btnExport.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.ForeColor = System.Drawing.Color.White
+        Me.btnExport.Location = New System.Drawing.Point(80, 215)
         Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.Size = New System.Drawing.Size(261, 39)
         Me.btnExport.TabIndex = 16
         Me.btnExport.Text = "Export"
-        Me.btnExport.UseVisualStyleBackColor = True
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -346,17 +499,28 @@ Partial Class thesis
         Me.GroupBox2.Controls.Add(Me.btnExport)
         Me.GroupBox2.Controls.Add(Me.btnAdd)
         Me.GroupBox2.Controls.Add(Me.btnUpdate)
-        Me.GroupBox2.Location = New System.Drawing.Point(985, 371)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(748, 441)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(334, 109)
+        Me.GroupBox2.Size = New System.Drawing.Size(399, 283)
         Me.GroupBox2.TabIndex = 17
         Me.GroupBox2.TabStop = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(727, 47)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(232, 15)
+        Me.Label8.TabIndex = 22
+        Me.Label8.Text = "_____________________________________________"
+        '
         'thesis
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1334, 550)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1184, 726)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnrefresh)
         Me.Controls.Add(Me.ThesisNum)
@@ -366,6 +530,9 @@ Partial Class thesis
         Me.Controls.Add(Me.txtsearch)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Label8)
+        Me.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "thesis"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "thesis"
@@ -398,7 +565,6 @@ Partial Class thesis
     Friend WithEvents txtTitle As TextBox
     Friend WithEvents txtAuthor As TextBox
     Friend WithEvents txtCallNum As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents callnum As DataGridViewTextBoxColumn
     Friend WithEvents title As DataGridViewTextBoxColumn
@@ -410,4 +576,10 @@ Partial Class thesis
     Friend WithEvents btnrefresh As Button
     Friend WithEvents btnExport As Button
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

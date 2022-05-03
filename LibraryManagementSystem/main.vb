@@ -53,4 +53,38 @@
             .Show()
         End With
     End Sub
+
+    Private Sub btnDashBoard_Click(sender As Object, e As EventArgs) Handles btnDashBoard.Click
+        With dashboard
+            .TopLevel = False
+            displayPanel.Controls.Clear()
+            displayPanel.Controls.Add(dashboard)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        With dashboard
+            .TopLevel = False
+            displayPanel.Controls.Clear()
+            displayPanel.Controls.Add(dashboard)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnRegister_Click_1(sender As Object, e As EventArgs) Handles btnRegister.Click
+        With registration
+            .TopLevel = False
+            displayPanel.Controls.Clear()
+            displayPanel.Controls.Add(registration)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 End Class

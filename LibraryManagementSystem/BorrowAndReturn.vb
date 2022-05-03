@@ -129,6 +129,10 @@
     Private Sub borrowBook()
         If (Convert.ToInt32(DataGridView2.CurrentRow.Cells(3).Value) >= 2) Then
             MessageBox.Show("The maximum number of borrowed book reached.")
+        ElseIf (DataGridView1.CurrentRow.Cells(3).Value.ToString = "Weeded-out") Then
+            MessageBox.Show("This book is Weeded-Out.")
+        ElseIf (DataGridView1.CurrentRow.Cells(3).Value.ToString = "Lost") Then
+            MessageBox.Show("This book is Lost.")
         ElseIf (DataGridView1.CurrentRow.Cells(3).Value.ToString = "Borrowed") Then
             MessageBox.Show("This book is already borrowed.")
         Else
@@ -207,16 +211,6 @@
 
     Private Sub btnSearchEmployee_Click(sender As Object, e As EventArgs) Handles btnSearchEmployee.Click
         searchEmployee()
-    End Sub
-
-    Private Sub btnRegisterStudent_Click(sender As Object, e As EventArgs) Handles btnRegisterStudent.Click
-        Dim form As New StudentRegistration
-        form.Show()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim form As New facultyRegistration
-        form.Show()
     End Sub
 
     Private Sub btnRefreshEmployee_Click(sender As Object, e As EventArgs) Handles btnRefreshEmployee.Click

@@ -60,6 +60,9 @@ VALUES (@title, @frequency)")
         txtTitle.Text = ""
         txtfrequency.Text = ""
         txtsearch.Text = ""
+
+        rdTitle.Checked = False
+        rdFrequency.Checked = False
     End Sub
 
     Private Sub exportExcel()
@@ -79,6 +82,7 @@ VALUES (@title, @frequency)")
 
     Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
         loadData()
+        clearFields()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

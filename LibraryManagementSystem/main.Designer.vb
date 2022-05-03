@@ -34,12 +34,18 @@ Partial Class main
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnRegister = New System.Windows.Forms.Button()
+        Me.btnDashBoard = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.mainPanel.SuspendLayout()
+        Me.displayPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBooks
@@ -48,11 +54,11 @@ Partial Class main
         Me.btnBooks.FlatAppearance.BorderSize = 0
         Me.btnBooks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBooks.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBooks.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBooks.ForeColor = System.Drawing.Color.Transparent
         Me.btnBooks.Image = CType(resources.GetObject("btnBooks.Image"), System.Drawing.Image)
         Me.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBooks.Location = New System.Drawing.Point(1, 185)
+        Me.btnBooks.Location = New System.Drawing.Point(1, 250)
         Me.btnBooks.Name = "btnBooks"
         Me.btnBooks.Size = New System.Drawing.Size(215, 40)
         Me.btnBooks.TabIndex = 0
@@ -67,11 +73,11 @@ Partial Class main
         Me.btnTheses.FlatAppearance.BorderSize = 0
         Me.btnTheses.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnTheses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTheses.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTheses.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTheses.ForeColor = System.Drawing.Color.Transparent
         Me.btnTheses.Image = CType(resources.GetObject("btnTheses.Image"), System.Drawing.Image)
         Me.btnTheses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTheses.Location = New System.Drawing.Point(1, 242)
+        Me.btnTheses.Location = New System.Drawing.Point(1, 307)
         Me.btnTheses.Name = "btnTheses"
         Me.btnTheses.Size = New System.Drawing.Size(215, 40)
         Me.btnTheses.TabIndex = 1
@@ -86,11 +92,11 @@ Partial Class main
         Me.btnJournal.FlatAppearance.BorderSize = 0
         Me.btnJournal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnJournal.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJournal.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnJournal.ForeColor = System.Drawing.Color.Transparent
         Me.btnJournal.Image = CType(resources.GetObject("btnJournal.Image"), System.Drawing.Image)
         Me.btnJournal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnJournal.Location = New System.Drawing.Point(1, 298)
+        Me.btnJournal.Location = New System.Drawing.Point(1, 363)
         Me.btnJournal.Name = "btnJournal"
         Me.btnJournal.Size = New System.Drawing.Size(215, 40)
         Me.btnJournal.TabIndex = 2
@@ -105,11 +111,11 @@ Partial Class main
         Me.btnReturn.FlatAppearance.BorderSize = 0
         Me.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReturn.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturn.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReturn.ForeColor = System.Drawing.Color.Transparent
         Me.btnReturn.Image = CType(resources.GetObject("btnReturn.Image"), System.Drawing.Image)
         Me.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReturn.Location = New System.Drawing.Point(1, 414)
+        Me.btnReturn.Location = New System.Drawing.Point(1, 479)
         Me.btnReturn.Name = "btnReturn"
         Me.btnReturn.Size = New System.Drawing.Size(215, 40)
         Me.btnReturn.TabIndex = 5
@@ -124,11 +130,11 @@ Partial Class main
         Me.btnUsers.FlatAppearance.BorderSize = 0
         Me.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUsers.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUsers.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUsers.ForeColor = System.Drawing.Color.Transparent
         Me.btnUsers.Image = CType(resources.GetObject("btnUsers.Image"), System.Drawing.Image)
         Me.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUsers.Location = New System.Drawing.Point(1, 356)
+        Me.btnUsers.Location = New System.Drawing.Point(1, 421)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(215, 40)
         Me.btnUsers.TabIndex = 4
@@ -143,11 +149,11 @@ Partial Class main
         Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Transparent
         Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
         Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExit.Location = New System.Drawing.Point(0, 725)
+        Me.btnExit.Location = New System.Drawing.Point(0, 746)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(215, 40)
         Me.btnExit.TabIndex = 3
@@ -170,7 +176,8 @@ Partial Class main
         '
         'displayPanel
         '
-        Me.displayPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.displayPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.displayPanel.Controls.Add(Me.Panel4)
         Me.displayPanel.Location = New System.Drawing.Point(215, 42)
         Me.displayPanel.Name = "displayPanel"
         Me.displayPanel.Size = New System.Drawing.Size(1171, 746)
@@ -201,6 +208,8 @@ Partial Class main
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnRegister)
+        Me.Panel1.Controls.Add(Me.btnDashBoard)
         Me.Panel1.Controls.Add(Me.btnReturn)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnUsers)
@@ -209,7 +218,7 @@ Partial Class main
         Me.Panel1.Controls.Add(Me.btnBooks)
         Me.Panel1.Controls.Add(Me.btnTheses)
         Me.Panel1.Controls.Add(Me.btnJournal)
-        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Font = New System.Drawing.Font("Bookman Old Style", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.Color.Transparent
@@ -217,6 +226,44 @@ Partial Class main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(215, 788)
         Me.Panel1.TabIndex = 0
+        '
+        'btnRegister
+        '
+        Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegister.FlatAppearance.BorderSize = 0
+        Me.btnRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegister.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.ForeColor = System.Drawing.Color.Transparent
+        Me.btnRegister.Image = CType(resources.GetObject("btnRegister.Image"), System.Drawing.Image)
+        Me.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRegister.Location = New System.Drawing.Point(0, 538)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(215, 40)
+        Me.btnRegister.TabIndex = 7
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRegister.UseVisualStyleBackColor = True
+        '
+        'btnDashBoard
+        '
+        Me.btnDashBoard.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDashBoard.FlatAppearance.BorderSize = 0
+        Me.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDashBoard.Font = New System.Drawing.Font("Segoe UI Semilight", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDashBoard.ForeColor = System.Drawing.Color.Transparent
+        Me.btnDashBoard.Image = CType(resources.GetObject("btnDashBoard.Image"), System.Drawing.Image)
+        Me.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashBoard.Location = New System.Drawing.Point(0, 195)
+        Me.btnDashBoard.Name = "btnDashBoard"
+        Me.btnDashBoard.Size = New System.Drawing.Size(215, 40)
+        Me.btnDashBoard.TabIndex = 6
+        Me.btnDashBoard.Text = "Dashboard"
+        Me.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDashBoard.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -237,6 +284,25 @@ Partial Class main
         Me.Panel3.Size = New System.Drawing.Size(215, 41)
         Me.Panel3.TabIndex = 2
         '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel4.Location = New System.Drawing.Point(0, 704)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1171, 42)
+        Me.Panel4.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 12)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(516, 20)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "For more information please contact the developer:  talaocivangabriel@gmail.com"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,10 +314,13 @@ Partial Class main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Library Inventory System"
         Me.mainPanel.ResumeLayout(False)
+        Me.displayPanel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -269,4 +338,8 @@ Partial Class main
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents displayPanel As Panel
+    Friend WithEvents btnDashBoard As Button
+    Friend WithEvents btnRegister As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label2 As Label
 End Class

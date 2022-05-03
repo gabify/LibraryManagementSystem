@@ -226,4 +226,5 @@
     Private Sub searchCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles searchCombo.SelectedIndexChanged
 
     End Sub
+
 End Class
